@@ -22,6 +22,7 @@ var (
 // Initialize sets up the plugin monitoring routine and creates the necessary directories
 func Initialize() {
 	// Create the plugin directory if it doesn't exist
+	fmt.Println("ok Initialize function is working")
 	if err := os.MkdirAll(pluginDir, os.ModePerm); err != nil {
 		fmt.Println("Error creating plugin directory:", err)
 		return
