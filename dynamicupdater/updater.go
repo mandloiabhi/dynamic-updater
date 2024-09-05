@@ -64,6 +64,7 @@ func loadPlugins() {
 
 			functionName := strings.TrimSuffix(file.Name(), filepath.Ext(file.Name()))
 			functionName = strings.TrimSuffix(functionName, ".go")
+			fmt.println(functionName)
 			f, err := p.Lookup(functionName)
 			if err != nil {
 				fmt.Println("Error finding function in plugin:", err)
